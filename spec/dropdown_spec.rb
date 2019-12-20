@@ -9,14 +9,18 @@ describe 'caixa de selecao', :dropdown do
 
     it 'intem especifico com o find' do
         visit 'https://training-wheels-protocol.herokuapp.com/dropdown'
-        find('avenger-list')
-
-
+        drop = find('.avenger-list')
+        drop.find('option', text: 'Scott Lang').select_option
+        sleep 3
 
     end
 
+    it 'qualquer item' do
+        visit 'https://training-wheels-protocol.herokuapp.com/dropdown'
+        drop = find('.avenger-list')
+        drop.all('option').sample.select_option
+        sleep 3
 
 
-
-
+    end
 end
