@@ -6,7 +6,7 @@ describe 'testando logar e relatorio pesonalizado' do
         fill_in 'login', with: 'suporte'
         fill_in 'inputPassword3', with: 'W3b7r@n$2.0'
         click_link 'Entrar'
-
+    
         #expect(find('#blip-chat-close-icon').visible?).to be true
         #expect(find('#lb-pendencias')).to have_content 'Mostrar Pendências'
         expect(find('#message').text).to eq 'Olá, posso te ajudar?'
